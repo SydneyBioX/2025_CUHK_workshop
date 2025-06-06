@@ -11,10 +11,11 @@ sudo apt-get install libjpeg-dev
 
 ## Make a tmp folder and git clone
 mkdir /home/gittmp/
-git clone https://github.com/SydneyBioX/HKUST_workshop /home/gittmp/
+git clone https://github.com/SydneyBioX/2025_CUHK_workshop /home/gittmp/
 
 ## wget all data files from Google Cloud Storage into /home/CPC/
 cd /home/gittmp
+## need to edit this link later, when we get the data
 wget -O data.zip "https://www.dropbox.com/scl/fi/6icd5vix870uoffv9p3zb/data.zip?rlkey=hu1tvpbdg0msykrud05hbclj6&st=2qbsk235&dl=0"
 unzip data.zip
 
@@ -25,12 +26,12 @@ ls /home/gittmp/
   
 sudo groupadd trainees
 
-for((userIndex = 1; userIndex <= 75; userIndex++))
+for((userIndex = 1; userIndex <= 30; userIndex++))
   do
 {
   userID=user${userIndex}
   sudo useradd -g trainees -d /home/$userID -m -s /bin/bash $userID
   # sudo cp -r /home/gittmp/* /home/$userID/
-  echo $userID:2024 | sudo chpasswd
+  echo $userID:2025 | sudo chpasswd
 }
 done

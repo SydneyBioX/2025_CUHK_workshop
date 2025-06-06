@@ -7,23 +7,23 @@ gce_global_project("semiotic-vial-255604")
 gce_global_zone("us-central1-a")
 
 ## see gce_list_machinetype() for options of predefined_type
-(tag = "gcr.io/semiotic-vial-255604/diseaseprediction:alpha")
+(tag = "gcr.io/semiotic-vial-255604/spatial:alpha")
 
 the_list <- gce_list_instances()
 
 vm1 <- gce_vm(template = "rstudio",
-              name = "diseaseprediction",
+              name = "spatial",
               disk_size_gb = 500,
-              predefined_type = "n2-standard-32",
+              predefined_type = "e2-standard-32",
               dynamic_image = tag,
               user = "rstudio",
               password = "test")
 
 # gce_global_zone("us-west2-a")
 vm2 <- gce_vm(template = "rstudio",
-             name = "diseaseprediction2",
+             name = "spatial2",
              disk_size_gb = 500,
-             predefined_type = "n2-standard-32",
+             predefined_type = "e2-standard-32",
              dynamic_image = tag,
              user = "rstudio",
              password = "test")

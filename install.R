@@ -11,8 +11,8 @@ install.packages("BiocManager", repos="https://cran.rstudio.com")
 #devtools::install_github("Bioconductor/BiocManager")
 library(BiocManager)
 
-if(BiocManager::version() != "3.19"){
-  BiocManager::install(version="3.19",
+if(BiocManager::version() != "3.21"){
+  BiocManager::install(version="3.21",
                        update=TRUE, ask=FALSE)
 }
 
