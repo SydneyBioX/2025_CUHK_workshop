@@ -11,7 +11,7 @@ sudo apt-get install libjpeg-dev
 
 ## Make a tmp folder and git clone
 mkdir /home/gittmp/
-git clone https://github.com/SydneyBioX/2025_CUHK_workshop /home/gittmp/
+git clone https://github.com/SydneyBioX/2025_CUHK_workshop.git /home/gittmp/
 
 ## wget all data files from Google Cloud Storage into /home/CPC/
 cd /home/gittmp
