@@ -1,8 +1,8 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-m', '30g', '-t', 'gcr.io/semiotic-vial-255604/spatial:alpha', '.']
+  args: ['build', '-m', '30g', '-t', 'us-west1-docker.pkg.dev/semiotic-vial-255604/workshop/spatial:alpha', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/semiotic-vial-255604/spatial:alpha']
+  args: ['push', 'us-west1-docker.pkg.dev/semiotic-vial-255604/workshop/spatial:alpha']
 options:
   machineType: 'E2_HIGHCPU_32'
 timeout: 9600s
