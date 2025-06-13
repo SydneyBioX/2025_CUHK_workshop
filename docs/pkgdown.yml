@@ -1,8 +1,9 @@
 pandoc: 3.1.11
-pkgdown: 2.0.9
+pkgdown: 2.1.2
 pkgdown_sha: ~
 articles:
-  breastCancerIMC: breastCancerIMC.html
-  VisiumVersion3: VisiumVersion3.html
-last_built: 2024-11-28T10:39Z
-
+  CUHK_workshop_v2: CUHK_workshop_v2.html
+last_built: 2025-06-13T00:47Z
+urls:
+  reference: https://sydneybiox.github.io/2025_CUHK_workshop/reference
+  article: https://sydneybiox.github.io/2025_CUHK_workshop/articles
