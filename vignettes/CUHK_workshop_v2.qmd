@@ -16,6 +16,7 @@ format:
       light: cosmo
 ---
 
+```{=html}
 <style>
 .question {
   padding: 1em;
@@ -24,6 +25,7 @@ format:
   border-radius: 10px;
 }
 </style>
+```
 
 **Authors**
 
@@ -96,7 +98,7 @@ plot_barplot <- function(data , dodge=F  ){
   data <- as.data.frame( melt(data, id=c("patient", "condition")) )
  
   p <-   ggplot(data , aes( x = patient , y = value , fill = variable) ) +   
-    geom_bar(stat="identity"   ) + facet_wrap(~condition, scale="free") + 
+    geom_bar(stat="identity") + facet_wrap(~condition, scales ="free") + 
     theme(panel.background=element_blank(),
           axis.line=element_line(color="black"),
           axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) 
